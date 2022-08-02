@@ -1,6 +1,5 @@
 
 """
-
 The 7 classes of skin cancer lesions included in this dataset are:
 Melanocytic nevi (nv)
 Melanoma (mel)
@@ -9,10 +8,7 @@ Basal cell carcinoma (bcc)
 Actinic keratoses (akiec)
 Vascular lesions (vas)
 Dermatofibroma (df)
-
 """
-
-
 
 import numpy as np
 from PIL import Image
@@ -47,8 +43,3 @@ def getPrediction(filename):
     pred_class = le.inverse_transform([np.argmax(pred)])[0]
     print("Diagnosis is:", pred_class)
     return pred_class
-
-
-#a =getPrediction('vasc.jpg')
-
-
