@@ -1,12 +1,3 @@
-# https://youtu.be/ZS1ivzlymPQ
-"""
-
-Werkzeug provides a bunch of utilities for developing WSGI-compliant applications. 
-These utilities do things like parsing headers, sending and receiving cookies, 
-providing access to form data, generating redirects, generating error pages when 
-there's an exception, even providing an interactive debugger that runs in the browser. 
-Flask then builds upon this foundation to provide a complete web framework.
-"""
 
 from flask import Flask, render_template, request, redirect, flash
 from werkzeug.utils import secure_filename
