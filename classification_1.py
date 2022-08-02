@@ -1,32 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jul  7 18:40:41 2022
-
-@author: USER
-"""
-
-
-# https://youtu.be/fyZ9Rxpoz2I
-"""
-Skin cancer lesion classification using the HAM10000 dataset
-Autokeras to find the best model. 
-
-Dataset link:
-https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000
-Data description: 
-https://arxiv.org/ftp/arxiv/papers/1803/1803.10417.pdf
-
-The 7 classes of skin cancer lesions included in this dataset are:
-Melanocytic nevi (nv)
-Melanoma (mel)
-Benign keratosis-like lesions (bkl)
-Basal cell carcinoma (bcc) 
-Actinic keratoses (akiec)
-Vascular lesions (vas)
-Dermatofibroma (df)
-"""
-
-
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
