@@ -4,28 +4,19 @@ from werkzeug.utils import secure_filename
 from main import getPrediction
 import os
 
-#Save images to the 'static' folder as Flask serves images from this directory
+#Saving images to the 'static' folder as Flask serves images from this directory
 UPLOAD_FOLDER = 'static/images/'
 
-#Create an app object using the Flask class. 
+#Creating an app object using the Flask class. 
 app = Flask(__name__, static_folder="static")
 
-#Add reference fingerprint. 
-#Cookies travel with a signature that they claim to be legit. 
-#Legitimacy here means that the signature was issued by the owner of the cookie.
-#Others cannot change this cookie as it needs the secret key. 
-#It's used as the key to encrypt the session - which can be stored in a cookie.
-#Cookies should be encrypted if they contain potentially sensitive information.
+
 app.secret_key = "secret key"
 
-#Define the upload folder to save images uploaded by the user. 
+#Defining the upload folder to save images uploaded by the user. 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-#Define the route to be home. 
-#The decorator below links the relative route of the URL to the function it is decorating.
-#Here, index function is with '/', our root directory. 
-#Running the app sends us to index.html.
-#Note that render_template means it looks for the file in the templates folder. 
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -53,5 +44,5 @@ def submit_file():
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get('PORT', 5000)) #Define port so we can map container port to localhost
-    app.run(host='0.0.0.0', port=port)  #Define 0.0.0.0 for Docker
+    port = int(os.environ.get('PORT', 5000)) 
+    app.run(host='0.0.0.0', port=port)  
