@@ -1,5 +1,5 @@
 # cancer_prediction_by_images
-Deep learning model based image classification
+This is image classification problem
 
 Dataset is HAM10000 dataset i.e Human against machine 10000 images
 
